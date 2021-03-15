@@ -20,4 +20,8 @@
 }
 .status-bar__column .fa-battery-full {
   margin: 0px 5px;
+  
+  color: rgb(20, 158, 73);
 }
+
+

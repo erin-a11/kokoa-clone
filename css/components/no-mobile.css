@@ -1,0 +1,66 @@
+#no-mobile {
+    position: absolute;
+    z-index: 99;
+    height: 100vh;
+    background-color: black;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    top: 0;
+}
+
+#no-mobile > span{
+    color: white;
+    animation: no_mobile_notification 2s ease-in-out infinite;
+}
+
+#no-mobile_box{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    border: solid 8px white;
+    position: absolute;
+    top: 170px;
+    left: 650px;
+    z-index: 100;
+    animation: no_mobile_notification_outbox_siz 1.5s ease-in-out infinite;
+
+}
+
+@keyframes no_mobile_notification{
+    20%{
+      transform: rotateY(0);
+    }
+    70%{
+      transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes no_mobile_notification_outbox_siz{
+    20%{
+        transform: rotateY(0);
+        transform: scale(0.8);
+      }
+      70%{
+        transform: rotateY(180deg);
+        transform: scale(2);
+      }
+      100%{
+          transform: rotateY(360deg);
+          transform: scale(0.8);
+      }
+}
+
+  
+@media screen and (max-width: 645px) {
+    #no-mobile,
+    #no-mobile_box{
+        display: none;
+    }
+}
+
